@@ -1,0 +1,55 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 27 60% 95%; /* brand-cream */
+    --foreground: 41 65% 15%; /* dark-green-ish for text */
+
+    --card: 30 50% 97%;
+    --card-foreground: 41 65% 15%;
+
+    --popover: 30 50% 97%;
+    --popover-foreground: 41 65% 15%;
+
+    --primary: 41 65% 25%;
+    --primary-foreground: 42 80% 96%;
+
+    --secondary: 42 30% 90%;
+    --secondary-foreground: 41 65% 25%;
+
+    --muted: 42 30% 90%;
+    --muted-foreground: 41 30% 40%;
+
+    --accent: 42 30% 90%;
+    --accent-foreground: 41 65% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 41 20% 80%;
+    --input: 41 20% 80%;
+    --ring: 41 65% 25%;
+
+    --radius: 0.5rem;
+  }
+
+  /* No dark mode for this project to maintain the classic library aesthetic */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-brand-cream text-brand-green/80 font-sans antialiased;
+    background-image: url('https://www.transparenttextures.com/patterns/white-marble.png');
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif text-brand-green;
+  }
+}
