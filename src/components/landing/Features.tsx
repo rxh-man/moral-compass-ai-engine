@@ -38,16 +38,16 @@ const features = [
 
 const Features = () => {
   return (
-    <div className="py-20 bg-brand-green/5">
+    <div className="py-20">
       <div className="container mx-auto">
         <h2 className="text-4xl text-center font-bold mb-12">A Global Moral Compass</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-white/60 backdrop-blur-sm border-brand-gold/20 shadow-md hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="bg-card/50 backdrop-blur-sm border-border hover:border-brand-gold/50 shadow-md hover:shadow-xl transition-all duration-300">
               <CardHeader>
                 <div className="mb-4">{feature.icon}</div>
-                <CardTitle className="text-brand-green">{feature.title}</CardTitle>
-                <CardDescription className="text-brand-green/80 pt-2">{feature.description}</CardDescription>
+                <CardTitle>{feature.title}</CardTitle>
+                <CardDescription className="text-foreground/70 pt-2">{feature.description}</CardDescription>
               </CardHeader>
             </Card>
           ))}

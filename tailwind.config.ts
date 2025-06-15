@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,8 +20,8 @@ export default {
 		},
 		extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
+        sans: ['Roboto', 'sans-serif'],
+        serif: ['Anton', 'serif'],
       },
 			colors: {
         'brand-green': '#1A472A',

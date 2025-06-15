@@ -20,21 +20,21 @@ const DilemmaAnalyzer = () => {
   };
 
   return (
-    <div className="bg-white/50 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-brand-gold/20 max-w-2xl mx-auto">
+    <div className="bg-card/50 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-brand-gold/20 max-w-2xl mx-auto">
       <h3 className="text-2xl text-center mb-4">Upload Your Dilemma</h3>
-      <p className="text-center text-brand-green/70 mb-6">Personal, corporate, or national issues analyzed by AI across moral frameworks.</p>
+      <p className="text-center text-foreground/70 mb-6">Personal, corporate, or national issues analyzed by AI across moral frameworks.</p>
       <Textarea
         placeholder="Describe a moral or ethical dilemma... e.g., 'Should a self-driving car prioritize its passenger or a group of pedestrians?'"
-        className="min-h-[100px] bg-white/70"
+        className="min-h-[100px] bg-input border-brand-gold/30 focus:border-brand-gold focus:ring-brand-gold text-foreground"
         value={dilemma}
         onChange={(e) => setDilemma(e.target.value)}
       />
-      <Button onClick={handleAnalyze} disabled={isLoading || !dilemma} className="w-full mt-4 bg-brand-gold hover:bg-brand-gold/90 text-brand-green font-bold">
+      <Button onClick={handleAnalyze} disabled={isLoading || !dilemma} className="w-full mt-4 bg-brand-gold hover:bg-brand-gold/90 text-primary-foreground font-bold">
         {isLoading ? <Loader className="animate-spin mr-2" /> : 'Run Ethical Analysis'}
       </Button>
 
       {isLoading && (
-         <div className="mt-6 text-center text-brand-green/80">
+         <div className="mt-6 text-center text-foreground/70">
           <p>Analyzing across global moral lenses...</p>
           <div className="flex justify-center gap-4 mt-4">
               <BarChart className="animate-pulse" />
@@ -46,9 +46,9 @@ const DilemmaAnalyzer = () => {
       )}
 
       {analysis && (
-        <div className="mt-6 p-4 bg-brand-cream/50 rounded-md border border-brand-green/20 animate-fade-in-up">
-          <h4 className="font-bold text-lg mb-2">Preliminary Analysis:</h4>
-          <p className="text-brand-green/90">{analysis}</p>
+        <div className="mt-6 p-4 bg-accent/50 rounded-md border border-border animate-fade-in-up">
+          <h4 className="font-bold text-lg mb-2 text-brand-gold uppercase tracking-wider">Preliminary Analysis:</h4>
+          <p className="text-foreground/90">{analysis}</p>
         </div>
       )}
     </div>
